@@ -1,0 +1,11 @@
+{% import 'list_macro.html' as list_macro with context %}
+{% extends "base.html" %}
+{% block content %}
+<div class="px-3 mx-auto max-w-3xl">
+    <h1 class="leading-tight text-3xl font-semibold mb-4 mt-6 pb-2 capitalize">{% block header %}{%endblock%}</h1>
+    <ul class="">
+        {% block list_items %}
+        {% endblock %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% import 'tag_macro.html' as tag_macro with context %}
+<div class="flex justify-between border-t pt-2 pb-3 text-lg">
+    <span class="flex items-center">
+        <time class="text-sm font-semibold"
+            datetime="{{ article.date.isoformat() }}">{{ article.date | strftime('%d %b %Y') }}</time>
+        {% block article_title %}
+        <a class="ml-3 hover:underline" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+        {% endblock %}
+    </span>
+    {{ tag_macro.tags_for(article) }}
+</div>

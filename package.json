@@ -1,0 +1,12 @@
+{
+  "name": "pyhpc-2020",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx tailwindcss build css/style.css -o static/css/style.css",
+    "production": "NODE_ENV=production npx tailwindcss build css/style.css -o static/css/style.css"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  }
+}

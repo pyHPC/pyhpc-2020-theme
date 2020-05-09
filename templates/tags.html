@@ -1,0 +1,8 @@
+{% import 'list_macro.html' as list_macro with context %}
+{% extends "list.html" %}
+{% block header %}Tags{% endblock %}
+{% block list_items %}
+{% for tag, articles in tags|sort %}
+{{ list_macro.list_item_for(tag) }}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% macro tags_for(article) %}
+{% if article.tags %}
+<span class="flex items-center">
+    {% for tag in article.tags %}
+    <a class="text-xs inline-flex items-center font-bold leading-sm uppercase ml-2 px-1 py-1 bg-gray-300 text-gray-700 rounded-full hover:bg-gray-700 hover:text-gray-300"
+        href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
+    {% endfor %}
+</span>
+{% endif %}
+{% endmacro %}

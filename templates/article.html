@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
+{% block content %}
+<article class="px-3 mx-auto max-w-3xl">
+    <div class="flex flex-row justify-between w-full items-center">
+    <h1 class="leading-tight text-4xl font-semibold mb-4 mt-6 pb-2"><a href="{{ SITEURL }}/{{ article.url }}"
+            rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a></h1>
+    {% include 'twitter.html' %}
+    </div>
+    {% include 'article_header.html' %}
+    <div class="markdown">
+        {{ article.content }}
+    </div>
+</article>
+{% endblock %}

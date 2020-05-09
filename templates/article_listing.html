@@ -1,0 +1,9 @@
+<article class="pb-4">
+    {% include 'article_listing_header.html' %}
+    <div class="px-5 child:truncate">
+        {{ article.summary }}
+    </div>
+    <div class="flex flex-row-reverse">
+        <a class="underline hover:text-gray-700" href="{{ SITEURL }}/{{ article.url }}">Read More</a>
+    </div>
+</article>

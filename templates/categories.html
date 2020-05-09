@@ -1,0 +1,8 @@
+{% import 'list_macro.html' as list_macro with context %}
+{% extends "list.html" %}
+{% block header %}Categories{% endblock %}
+{% block list_items %}
+{% for category, articles in categories %}
+{{ list_macro.list_item_for(category) }}
+{% endfor %}
+{% endblock %}

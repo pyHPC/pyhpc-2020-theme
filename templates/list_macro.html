@@ -1,0 +1,5 @@
+{% macro list_item_for(item) %}
+{% if item %}
+<li><a href="{{ SITEURL }}/{{ item.url }}">{{ item }}</a></li>
+{% endif %}
+{% endmacro %}
