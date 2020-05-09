@@ -7,6 +7,7 @@ This theme uses Tailwind CSS.
 Install the requirements:
 ```
 npm install
+```
 
 Build a development version:
 ```
