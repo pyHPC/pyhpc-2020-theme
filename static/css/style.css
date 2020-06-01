@@ -709,6 +709,12 @@ video {
   border-color: rgba(203, 213, 224, var(--border-opacity));
 }
 
+.border-gray-600 {
+  --border-opacity: 1;
+  border-color: #718096;
+  border-color: rgba(113, 128, 150, var(--border-opacity));
+}
+
 .last\:border-transparent:last-child {
   border-color: transparent;
 }
@@ -989,6 +995,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-0 {
