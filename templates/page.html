@@ -5,6 +5,9 @@
     <h1 class="leading-tight text-2xl md:text-4xl font-semibold mb-4 mt-6 pb-2">
         {{ page.title }}{% if page.subtitle %}:<br />{{ page.subtitle }}{% endif %}
     </h1>
+    {% if page.conf_header %}
+    {% include 'conf_header.html' %}
+    {% endif %}
     <div class="markdown">
         {{ page.content }}
     </div>
