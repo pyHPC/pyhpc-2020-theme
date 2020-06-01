@@ -50,22 +50,11 @@
     </div>
   </div>
 </div>
-<div class="pt-8 px-3 mx-auto max-w-3xl">
-  {% if KEY_DATES %}
+<div class="px-3 mx-auto max-w-3xl md:pt-8">
+  {% if WORKSHOP_KEY_DATES %}
   <div id="dates">
     <h1 class="leading-tight text-3xl font-semibold mb-4 mt-6 pb-2">Key Dates</h1>
-    <div class="my-4 mx-4 w-full max-w-sm">
-      <ul>
-        {% for title, date, class in KEY_DATES %}
-        <li class="ml-2 pb-6 pl-6 border-l-2 last:border-transparent last:pb-0 relative timeline-element {{ class }}">
-          <div class="relative -top-4">
-            <h2 class="text-xl">{{ title }}</h2>
-            <p>{{ date }}</p>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+    {% include 'key_dates.html' %}
   </div>
   {% endif %}
   {% if articles %}
