@@ -1,3 +1,5 @@
+{% import 'logo_macro.html' as logo_macro with context %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,9 +33,13 @@
         <header x-data="{ open: false }"
             class="flex flex-col max-w-screen-xl mx-auto px-6 py-2 lg:px-16 lg:py-2 md:items-center md:justify-between md:flex-row">
             <div class="flex-1 flex justify-between items-center">
+                    {% if SITELOGO %}
+                    {{ logo_macro.logo(SITELOGO, "h-12 p-1") }}
+                    {% else %}
                 <a href="{{ SITEURL }}">
                     <h1 class="tracking-wider font-medium text-xl">{{ SITENAME }}</h1>
                 </a>
+                    {% endif %}
                 <button aria-label="Toggle navigation"
                     class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -69,14 +75,14 @@
     <footer class="bg-gray-100">
         <div class="bg-gray-100 pt-2 ">
             <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-row max-w-6xl">
+                    <div class="flex flex-row items-center mt-2 space-x-6 sm:space-x-12">
                 {% if WORKSHOP_CONF_LOGO %}
-                <div class="mt-2">
-                    <a href="https://sc20.supercomputing.org">
-                        <img class="h-16" alt="SC20 Logo" src="{{ SITEURL }}/{{ WORKSHOP_CONF_LOGO }}" />
-                        <span class="sr-only">Supercomputing 2020</span>
-                    </a>
+                        {{ logo_macro.logo(WORKSHOP_CONF_LOGO, "w-32") }}
+                        {% endif %}
+                        {% if WORKSHOP_PUB_LOGO %}
+                        {{ logo_macro.logo(WORKSHOP_PUB_LOGO, "w-32") }}
+                        {% endif %}
                 </div>
-                {% endif %}
                 <div class="flex-auto flex-row-reverse mt-2 flex">
                     {% if TWITTER_USERNAME %}
                     <a href="https://twitter.com/{{ TWITTER_USERNAME }}" class="w-8 mx-1">

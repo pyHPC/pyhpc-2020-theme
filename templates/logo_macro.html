@@ -1,0 +1,6 @@
+{% macro logo(logo, classes) %}
+<a class="py-2 border-b-2 border-transparent hover:border-indigo-400 {{ classes }}" href="{{ logo[2] }}">
+    <img class="w-full h-full" alt="{{ logo[1] }} Logo" src="{{ SITEURL }}/{{ logo[0] }}" />
+    <span class="sr-only">{{ logo[1] }}</span>
+</a>
+{% endmacro %}
