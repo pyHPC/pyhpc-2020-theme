@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Archives - {{ SITENAME }}{% endblock %}
+{% block title %}Updates - {{ SITENAME }}{% endblock %}
 {% block content %}
 <div class="px-3 mx-auto max-w-3xl">
   {% if articles %}
-  <h1 class="leading-tight text-3xl font-semibold mb-4 mt-6 pb-2 capitalize">{% block header %}Archives{%endblock%}</h1>
+  <h1 class="leading-tight text-3xl font-semibold mb-4 mt-6 pb-2 capitalize">{% block header %}Updates{%endblock%}</h1>
   {% for article in dates %}
   {% include 'article_listing.html' %}
   {% endfor %}
