@@ -34,7 +34,7 @@
                 class="flex flex-col max-w-screen-xl mx-auto px-6 py-2 lg:px-16 lg:py-2 md:items-center md:justify-between md:flex-row">
                 <div class="flex-1 flex justify-between items-center">
                     {% if SITELOGO %}
-                    {{ logo_macro.logo(SITELOGO, "h-12 p-1") }}
+                    {{ logo_macro.nav_logo(SITELOGO, "h-12 p-1") }}
                     {% else %}
                     <a href="{{ SITEURL }}">
                         <h1 class="tracking-wider font-medium text-xl">{{ SITENAME }}</h1>
