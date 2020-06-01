@@ -22,15 +22,15 @@
     <div class="flex flex-col items-center space-y-2 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-8">
         {% if page %}
         <a class="py-2 border-b-2 border-transparent hover:border-indigo-400" href="{{ WORKSHOP_CONF_LOGO[2] }}">
-            <img class="w-32" alt="{{ WORKSHOP_CONF_LOGO[1] }} Logo" src="{{ SITEURL }}/{{ WORKSHOP_CONF_LOGO[0] }}">
+            <img aria-hidden="true" class="w-32" alt="{{ WORKSHOP_CONF_LOGO[1] }} Logo" src="{{ SITEURL }}/{{ WORKSHOP_CONF_LOGO[0] }}">
             <span class="sr-only">{{ WORKSHOP_CONF_LOGO[1] }}</span>
         </a>
         {% endif %}
         <a class="py-2 border-b-2 border-transparent hover:border-indigo-400 space-y-1"
             href="{{ WORKSHOP_PUB_LOGO[2] }}">
-            <span class="text-base leading-none">{{ WORKSHOP_PUB_TEXT }}</span>
-            <img class="w-24 mx-auto" alt="{{ WORKSHOP_PUB_LOGO[1] }} Logo" src="{{ SITEURL }}/{{ WORKSHOP_PUB_LOGO[0] }}">
-            <span class="sr-only">{{ WORKSHOP_PUB_LOGO[1] }}</span>
+            <span class="text-base leading-none" aria-hidden="true">{{ WORKSHOP_PUB_TEXT }}</span>
+            <img aria-hidden="true" class="w-24 mx-auto" alt="{{ WORKSHOP_PUB_LOGO[1] }} Logo" src="{{ SITEURL }}/{{ WORKSHOP_PUB_LOGO[0] }}">
+            <span class="sr-only">{{ WORKSHOP_PUB_TEXT }} {{ WORKSHOP_PUB_LOGO[1] }}</span>
         </a>
     </div>
 </div>
