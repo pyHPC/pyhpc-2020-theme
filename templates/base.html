@@ -54,9 +54,14 @@
             </div>
             <nav :class="{'flex': open, 'hidden': !open}"
                 class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-                {% for title, link in MENUITEMS %}
+                    {% for title, link, external in MENUITEMS %}
                 <a href="{{ link }}"
-                    class="md:p-4 py-3 px-0 border-b-2 border-transparent hover:border-indigo-400">{{ title }}</a>
+                        class="md:p-4 py-3 px-0 border-b-2 border-transparent hover:border-indigo-400">
+                        {{ title }}
+                        {% if external %}
+                        <svg class="inline w-4 h-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        {% endif %}
+                    </a>
                 {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for page in pages %}
