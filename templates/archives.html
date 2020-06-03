@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Updates - {{ SITENAME }}{% endblock %}
+{% block url %}{{ output_file }}{% endblock %}
 {% block content %}
 <div class="px-3 mx-auto max-w-3xl">
   {% if articles %}

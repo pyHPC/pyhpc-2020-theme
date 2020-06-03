@@ -6,7 +6,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <meta name="title" content="{{ self.title() }}">
+    <meta name="description" content="{% block description %}{{ SITENAME }}{% endblock %}">
+
+    <meta property="og:title" content="{{ self.title() }}">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:url" content="{{ SITEURL }}/{% block url %}{% endblock %}">
+    <meta property="og:description" content="{{ self.description() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ SITEURL }}/{% block page_image %}{{ SITELOGO[0] }}{% endblock %}">
+
+    {% if TWITTER_USERNAME %}
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@{{TWITTER_USERNAME}}">
+    {% endif %}
+
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" defer />
     <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.3/dist/alpine.min.js"></script>
