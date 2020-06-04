@@ -480,10 +480,6 @@ textarea {
   resize: vertical;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #a0aec0;
-}
-
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #a0aec0;
 }
@@ -1127,6 +1123,12 @@ video {
   --text-opacity: 1;
   color: #4299e1;
   color: rgba(66, 153, 225, var(--text-opacity));
+}
+
+.text-blue-600 {
+  --text-opacity: 1;
+  color: #3182ce;
+  color: rgba(49, 130, 206, var(--text-opacity));
 }
 
 .hover\:text-gray-300:hover {
