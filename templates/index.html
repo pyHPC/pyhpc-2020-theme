@@ -36,6 +36,14 @@
     </div>
   </div>
 </div>
+{% if WORKSHOP_ALERT %}
+<div class="px-3 mx-auto max-w-3xl md:pt-8">
+  <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+    <h1 class="leading-tight text-3xl font-semibold mb-4 pb-2">{{ WORKSHOP_ALERT[0] }}</h1>
+    <div class="text-lg">{{ WORKSHOP_ALERT[1] }}</div>
+  </div>
+</div>
+{% endif %}
 <div class="px-3 mx-auto max-w-3xl md:pt-8">
   {% if WORKSHOP_KEY_DATES %}
   <div id="dates">
